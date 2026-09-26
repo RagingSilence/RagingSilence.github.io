@@ -1,0 +1,26 @@
+baseURL = 'https://ragingsilence.github.io/'
+locale = 'zh-CN'
+defaultContentLanguage = 'zh'
+title = '学习札记'
+hasCJKLanguage = true
+enableRobotsTXT = true
+[params]
+  author = 'RagingSilence'
+  description = '记录计算机学习、论文阅读与项目实践。'
+[taxonomies]
+  tag = 'tags'
+  category = 'categories'
+[pagination]
+  pagerSize = 10
+[markup]
+  [markup.highlight]
+    noClasses = false
+    lineNos = false
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+  [markup.goldmark.extensions.passthrough]
+    enable = true
+    [markup.goldmark.extensions.passthrough.delimiters]
+      block = [['\[', '\]'], ['$$', '$$']]
+      inline = [['\(', '\)']]

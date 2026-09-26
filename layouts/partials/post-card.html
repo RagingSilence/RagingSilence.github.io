@@ -1,0 +1,6 @@
+<article class="post-card">
+  <div class="post-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time>{{ range .GetTerms "categories" }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}{{ if .Params.example }}<span class="sample-label">示例文章</span>{{ end }}</div>
+  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  <p>{{ .Description | default (.Summary | plainify | truncate 120) }}</p>
+  <div class="card-bottom"><div>{{ range .GetTerms "tags" }}<a class="tag" href="{{ .RelPermalink }}"># {{ .LinkTitle }}</a>{{ end }}</div><a class="read-link" href="{{ .RelPermalink }}" aria-label="阅读：{{ .Title }}">阅读笔记 <span aria-hidden="true">↗</span></a></div>
+</article>

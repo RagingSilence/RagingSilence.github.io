@@ -1,0 +1,4 @@
+{{ define "main" }}
+<div class="page-heading"><div class="eyebrow">NOTEBOOK / {{ if eq .Data.Plural "tags" }}标签{{ else }}分类{{ end }}</div><h1>{{ if eq .Data.Plural "tags" }}标签{{ else }}文章分类{{ end }}</h1><p>沿着一个主题，把零散的笔记串起来。</p></div>
+<div class="topic-grid">{{ range .Data.Terms.Alphabetical }}<a href="{{ .Page.RelPermalink }}"><span>{{ .Page.Title }}</span><span class="topic-count">{{ .Count }} 篇 ↗</span></a>{{ else }}<p>发布文章后，分类和标签会自动出现在这里。</p>{{ end }}</div>
+{{ end }}

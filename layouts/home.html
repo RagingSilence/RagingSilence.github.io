@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section class="intro">
+  <div class="eyebrow">RAGINGSILENCE / 学习记录</div>
+  <h1>把学习的过程，<br><span>一点点写下来。</span></h1>
+  <p>记录计算机学习中的思考、疑问与实践。<br>给未来的自己留下一些可以重读的笔记。</p>
+  <div class="intro-bottom"><span class="status-dot"></span>持续学习，慢慢积累<a href="{{ "about/" | relURL }}">关于我 <span aria-hidden="true">↗</span></a></div>
+</section>
+<section class="recent"><div class="section-heading"><h2>最近的笔记</h2><a href="{{ "posts/" | relURL }}">全部文章 →</a></div>
+{{ range first 5 (where .Site.RegularPages "Section" "posts") }}{{ partial "post-card.html" . }}{{ else }}<p>第一篇笔记，正在路上。</p>{{ end }}
+</section>
+<section class="topics"><h2>学习的几个方向</h2><div class="topic-grid">
+  {{ range .Site.Taxonomies.categories.Alphabetical }}<a href="{{ .Page.RelPermalink }}"><span>{{ .Page.Title }}</span><span class="topic-count">{{ .Count }} 篇 <span aria-hidden="true">↗</span></span></a>{{ end }}
+</div></section>
+{{ end }}
