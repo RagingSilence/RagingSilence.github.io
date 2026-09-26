@@ -20,11 +20,11 @@ RagingSilence 的中文学习博客，使用 Hugo + GitHub Pages。页面无需�
 git init -b main
 git add .
 git commit -m "Create learning blog"
-git remote add origin https://github.com/RagingSilence/RagingSilence.github.io.git
+git remote add origin git@github.com:RagingSilence/RagingSilence.github.io.git
 git push -u origin main
 ```
 
-首次推送可能要求浏览器登录 GitHub。不要在源码或文章中放入密码、Token 等密钥。
+以上使用 SSH 推送。如果 SSH 密钥配置在 WSL 中，请在 WSL 终端运行 Git 命令。可以先用 `ssh -T git@github.com` 确认身份；GitHub 返回成功认证的用户名即可，退出码 1 在这个测试中是正常的。SSH 不能创建远程仓库，需要先完成上面的仓库创建步骤。不要在源码或文章中放入密码、Token 等密钥。
 
 ## 本地预览
 
