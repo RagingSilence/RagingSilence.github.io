@@ -1,7 +1,7 @@
 ---
 title: '从 Jev 看 Agent 的下一步：推理、决策与执行如何分工'
 date: 2026-09-27T00:30:00+08:00
-draft: false
+draft: true
 description: '综合近期 AI 动态、Jev 技术资料与七个开源项目的数据，理解决策模型的价值、评测边界，以及值得动手验证的研究问题。'
 categories: ['学习笔记']
 tags: ['Jev', 'AI Agent', '决策模型', '开源', '模型评测']
